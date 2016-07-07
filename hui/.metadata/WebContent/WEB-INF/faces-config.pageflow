@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14674922688340" configfile="/hui/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="insert.xhtml" comment="add user" id="pf14674922987961" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14674922987962 pf14674922987963" path="/insert.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="output.xhtml" id="pf14674922987964" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14674922987962" path="/output.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="invalid.xhtml" id="pf14674922987965" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14674922987963" path="/invalid.xhtml"/>
+  <links id="pf14674922987962" target="pf14674922987964" source="pf14674922987961" outcome="output" fromaction="#{user.add}"/>
+  <links id="pf14674922987963" target="pf14674922987965" source="pf14674922987961" outcome="invalid" fromaction="#{user.add}"/>
+</pageflow:Pageflow>
